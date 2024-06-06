@@ -1,40 +1,53 @@
 @font-face {
-    font-family: 'Figtree'; /* Specify the name you want to use for the font */
-    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype'); /* Provide alternative font formats if necessary */
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
 }
 
-
-.background{
+.background {
     background-color: hsl(47, 88%, 63%);
 }
 
-
-.main-container{
-    display: flex; 
+.main-container {
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 90vw;
 }
 
-@media (max-width:500px){
-    .main-card{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 40% 60%;
-        grid-template-areas: 
-            "image-stuff"
-            "written-stuff"
-        ;
-        border: 5px solid black;
-        height: 60vh;
-        width: 80vw;
-        background-color: hsl(0, 0%, 100%);
-        border-radius: 24px;
-        padding: 1em 1em 1em 1em;
-        box-shadow: 10px 10px hsl(0, 0%, 7%);
-        border: .1em solid black;
-        font-family: Figtree;
+.main-card {
+    display: grid;
+    grid-template-areas: "image-stuff" "written-stuff";
+    border: 2px solid black;
+    height: 60%;
+    width: 25%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 24px;
+    padding: 1em;
+    box-shadow: 5px 5px hsl(0, 0%, 7%);
+    font-family: Figtree;
+}
+
+@media (max-width: 480px) {
+    .main-card { width: 80vw; }
+}
+
+@media (min-width: 481px) {
+    .main-card { width: 40%; }
+}
+
+@media (min-width: 769px) {
+    .main-card { width: 30%;}
+}
+
+@media (min-width: 1024px) {
+    .main-card { width: 20%;}
+}
+
+.main-card:hover{
+    box-shadow: 10px 10px hsl(0, 0%, 7%);
+    .header{
+        color: hsl(47, 88%, 63%);
     }
 }
 
@@ -44,72 +57,52 @@
     padding: 0;
 }
 
-.image-style{
+.image-style {
     width: 100%;
     height: 100%;
-    border-radius: 2em;
-    padding: 0;
-    margin: 0;
+    border-radius: 16px;
 }
 
-.desc-container{
-    grid-area: written-stuff;
+@media (min-height:769px){
+    .image-style{
+        border-radius: 24px;
+    }
+}
+
+.desc-container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20% 5% 1% 20% 1% 43% 10%;
-    grid-template-areas: 
-        "tags"
-        "dates"
-        "."
-        "title"
-        "."
-        "description"
-        "author"
-    ;
+    grid-template-areas: "tags" "dates" "." "title" "." "description" "author";
 }
 
-.tag{
-    grid-area: tags;
-    display: flex;
-}
-
-.tag button{
+.tag button {
     border-radius: 5px;
-    background-color:  hsl(47, 88%, 63%); 
+    background-color: hsl(47, 88%, 63%);
     font-weight: 800;
-    font-size: 1em;
+    font-size: 90%;
     border-color: hsl(47, 88%, 63%);
-    padding-left: 1em;
-    padding-right: 1em;
-    margin: 0;
+    padding: 0.2em 1em;
 }
 
-.publish{
-    grid-area:dates;
-    font-size: 1em;
+.publish {
+    font-size: 0.8em;
     font-weight: 500;
-    padding: 0;
-    margin: 1em;
-    margin-left: 0;
+    margin: 0.9em 0 0 0;
 }
 
-.header{
-    grid-area: title;
+.header {
     font-weight: 800;
     font-size: 1.2em;
     margin-top: 1em;
 }
 
-.desc{
-    grid-area:description;
+.desc {
     color: hsl(0, 0%, 50%);
-    font-weight: 500, 800;
+    font-weight: 500;
     font-size: 95%;
     margin-top: 1em;
 }
 
-.writer{
-    grid-area: author;
+.writer {
     font-weight: 800;
     font-size: 1em;
 }
