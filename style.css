@@ -92,14 +92,12 @@
 .header {
     font-weight: 800;
     font-size: 1.2em;
-    margin-top: 1em;
 }
 
 .desc {
     color: hsl(0, 0%, 50%);
     font-weight: 500;
     font-size: 95%;
-    margin-top: 1em;
 }
 
 .writer {
