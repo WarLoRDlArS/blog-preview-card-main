@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Figtree'; /* Specify the name you want to use for the font */
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype'); /* Provide alternative font formats if necessary */
+}
+
+
+.background{
+    background-color: hsl(47, 88%, 63%);
+}
+
+
+.main-container{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 90vw;
+}
+
+@media (max-width:500px){
+    .main-card{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 60%;
+        grid-template-areas: 
+            "image-stuff"
+            "written-stuff"
+        ;
+        border: 5px solid black;
+        height: 60vh;
+        width: 80vw;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 24px;
+        padding: 1em 1em 1em 1em;
+        box-shadow: 10px 10px hsl(0, 0%, 7%);
+        border: .1em solid black;
+        font-family: Figtree;
+    }
+}
+
+.image{
+    grid-area: image-stuff;
+    margin: 0;
+    padding: 0;
+}
+
+.image-style{
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.desc-container{
+    grid-area: written-stuff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 5% 1% 20% 1% 43% 10%;
+    grid-template-areas: 
+        "tags"
+        "dates"
+        "."
+        "title"
+        "."
+        "description"
+        "author"
+    ;
+}
+
+.tag{
+    grid-area: tags;
+    display: flex;
+}
+
+.tag button{
+    border-radius: 5px;
+    background-color:  hsl(47, 88%, 63%); 
+    font-weight: 800;
+    font-size: 1em;
+    border-color: hsl(47, 88%, 63%);
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0;
+}
+
+.publish{
+    grid-area:dates;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0;
+    margin: 1em;
+    margin-left: 0;
+}
+
+.header{
+    grid-area: title;
+    font-weight: 800;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+.desc{
+    grid-area:description;
+    color: hsl(0, 0%, 50%);
+    font-weight: 500, 800;
+    font-size: 95%;
+    margin-top: 1em;
+}
+
+.writer{
+    grid-area: author;
+    font-weight: 800;
+    font-size: 1em;
+}
