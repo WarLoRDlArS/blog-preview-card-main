@@ -41,7 +41,7 @@
 }
 
 @media (min-width: 1024px) {
-    .main-card { width: 20%;}
+    .main-card { width: 30%;}
 }
 
 .main-card:hover{
@@ -97,7 +97,7 @@
 .desc {
     color: hsl(0, 0%, 50%);
     font-weight: 500;
-    font-size: 95%;
+    font-size: 80%;
 }
 
 .writer {
